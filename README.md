@@ -1,6 +1,7 @@
 # titanic-disaster-data-analysis
 
 ### 1. Whole structure of this Repo:
+
 ```bash
 TITANIC-DISASTER-DATA-ANALYSIS/
 │
@@ -32,12 +33,11 @@ The TITANIC-DISASTER-DATA-ANALYSIS project is organized to support reproducible 
 
 ### 2. Terminal Commands to build and run code with DockerFile:
 #### For python:
-
-
-Build a docker image: docker build -t titanic_python -f src/python-app/Dockerfile . 
+Build a docker image: docker build -t titanic_python -f src/python-app/Dockerfile .
 
 
 Run your docker image in a container, the data comes from your local computer: docker run --rm -v "$(pwd)/src/data:/app/src/data" titanic_python
+
 
 #### Similar for R:
 docker build -t titanic_r -f src/R-app/Dockerfile . 
@@ -54,7 +54,6 @@ docker run --rm -v "$(pwd)/src/data:/app/src/data" titanic_r
 
 #Deactivate your virtual environment: deactivate
 
-
 #### For python:
 #Install necessary packages: pip install -r src/python-app/requirements.txt
 
@@ -67,6 +66,7 @@ docker run --rm -v "$(pwd)/src/data:/app/src/data" titanic_r
 
 
 #run R script: Rscript src/R-app/titanic_analysis.R
+
 
 ### 4. How to download the dataset: 
 1. Go to this website: https://www.kaggle.com/competitions/titanic/overview, and log in to the kaggle
@@ -92,4 +92,3 @@ src/data/predictions_python.csv
 
 
 src/data/predictions_R.csv
-
